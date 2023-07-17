@@ -12,13 +12,16 @@ f_001()
     cd "$P300_ROOT_DIR"
 }
 
+if [ "$1" = "" ]; then
+    f_001
+    exit
+fi
+
 if [ "$1" = "001" ]; then
     f_001
     exit
 fi
 
-# download all
-f_001
 
 
 
