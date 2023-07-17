@@ -47,3 +47,6 @@ __MACOSX
 .vscode
 *.swp
 *.log
+
+# current project link file
+/current
