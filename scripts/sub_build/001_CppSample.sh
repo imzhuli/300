@@ -17,6 +17,7 @@ rm -rf "$CMAKE_INSTALL_PREFIX"/lib/libxel.a
 # build
 CMAKE_FLAGS="--no-warn-unused-cli -Wno-dev -DX_OPTION_STATIC=true"
 CPPSAMPLE_BUILD_DIR="$CPPSAMPLE_DIR/build"
+
 rm -rf "$CPPSAMPLE_BUILD_DIR"
 mkdir -p "${CPPSAMPLE_BUILD_DIR}"
 cd "${CPPSAMPLE_BUILD_DIR}"

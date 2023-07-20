@@ -23,9 +23,20 @@ f_001_CppSample()
     cd "$P300_ROOT_DIR"
 }
 
+f_010_XEngine()
+{
+    echo "XEngine dir: $XENGINE_DIR"
+    rm -rf "$XENGINE_DIR"
+    mkdir -p "$XENGINE_SOURCE_DIR"
+    git clone "$XENGINE_GIT_SOURCE" "$XENGINE_SOURCE_DIR"
+    cd "$XENGINE_SOURCE_DIR"; git checkout "$XENGINE_VERSION";
+    cd "$P300_ROOT_DIR"
+}
+
 if [ "$1" = "" ]; then
     f_000_Assets
     f_001_CppSample
+    f_010_XEngine
     exit
 fi
 
@@ -38,6 +49,12 @@ if [ "$1" = "001" ]; then
     f_001_CppSample
     exit
 fi
+
+if [ "$1" = "010" ]; then
+    f_010_XEngine
+    exit
+fi
+
 
 
 
