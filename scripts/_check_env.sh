@@ -26,6 +26,11 @@ export CPPSAMPLE_VERSION="HEAD"
 export CPPSAMPLE_DIR="$P300_DOWNLOAD_SOURCE_DIR/001"
 export CPPSAMPLE_SOURCE_DIR="$CPPSAMPLE_DIR/vcs"
 
+export GLFW_GIT_SOURCE="https://github.com/glfw/glfw.git"
+export GLFW_TAG="3.3.8"
+export GLFW_DIR="$P300_DOWNLOAD_SOURCE_DIR/005"
+export GLFW_SOURCE_DIR="$GLFW_DIR/vcs"
+
 export XENGINE_GIT_SOURCE="git@github.com:imzhuli/300_engine"
 export XENGINE_VERSION="HEAD"
 export XENGINE_DIR="$P300_DOWNLOAD_SOURCE_DIR/010"

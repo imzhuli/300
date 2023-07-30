@@ -23,6 +23,15 @@ f_001_CppSample()
     cd "$P300_ROOT_DIR"
 }
 
+f_005_Glfw()
+{
+    echo "GLFW dir: $GLFW_DIR"
+    rm -rf "$GLFW_DIR"
+    mkdir -p "$GLFW_DIR"
+    git clone --depth=1 --branch "$GLFW_TAG" "$GLFW_GIT_SOURCE" "$GLFW_SOURCE_DIR"
+    cd "$P300_ROOT_DIR"
+}
+
 f_010_XEngine()
 {
     echo "XEngine dir: $XENGINE_DIR"
@@ -36,6 +45,7 @@ f_010_XEngine()
 if [ "$1" = "" ]; then
     f_000_Assets
     f_001_CppSample
+    f_005_Glfw
     f_010_XEngine
     exit
 fi
@@ -47,6 +57,11 @@ fi
 
 if [ "$1" = "001" ]; then
     f_001_CppSample
+    exit
+fi
+
+if [ "$1" = "005" ]; then
+    f_005_Glfw
     exit
 fi
 
